@@ -1,3 +1,6 @@
+mod domain;
+mod infrastructure;
+
 use axum::{routing::get, Router};
 use std::sync::Arc;
 use axum::extract::Extension;
@@ -5,11 +8,8 @@ use tower_service::Service;
 use worker::*;
 use serde_json;
 use crate::infrastructure::in_memory_repo::InMemoryRepo;
-use crate::domain::Video::UseCase::GetVideo::GetVideoUseCase;
-use crate::domain::Video::Entity::VideoEntity::VideoId;
-
-// pub mod infrastructure;
-// pub mod domain;
+use crate::domain::video::usecase::GetVideo::GetVideoUseCase;
+use crate::domain::video::entity::VideoEntity::VideoId;
 
 fn router() -> Router {
     // composition root: 実装をここで生成して注入する
