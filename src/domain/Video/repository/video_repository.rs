@@ -1,6 +1,6 @@
 use async_trait::async_trait;
 use anyhow::Result;
-use crate::domain::Video::Entity::VideoEntity::{Video, VideoId};
+use crate::domain::video::entity::video_entity::{Video, VideoId};
 
 #[async_trait]
 pub trait VideoRepository: Send + Sync {

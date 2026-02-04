@@ -1,7 +1,7 @@
 use std::sync::Arc;
 use anyhow::{Result, anyhow};
-use crate::domain::Video::Repository::VideoRepository;
-use crate::domain::Video::Entity::VideoEntity::{Video, VideoId};
+use crate::domain::video::repository::video_repository::VideoRepository;
+use crate::domain::video::entity::video_entity::{Video, VideoId};
 
 pub struct GetVideoUseCase<R: VideoRepository> {
     repo: Arc<R>,

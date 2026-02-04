@@ -8,8 +8,8 @@ use tower_service::Service;
 use worker::*;
 use serde_json;
 use crate::infrastructure::in_memory_repo::InMemoryRepo;
-use crate::domain::video::usecase::GetVideo::GetVideoUseCase;
-use crate::domain::video::entity::VideoEntity::VideoId;
+use crate::domain::video::usecase::get_video::GetVideoUseCase;
+use crate::domain::video::entity::video_entity::VideoId;
 
 fn router() -> Router {
     // composition root: 実装をここで生成して注入する
